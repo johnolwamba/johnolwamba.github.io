@@ -50,3 +50,8 @@ footer > p {
 pre {
     background-color: #FFFFA8;
 }
+
+li.topIngrid {
+    padding: 0;
+    list-style-type: none;
+}
