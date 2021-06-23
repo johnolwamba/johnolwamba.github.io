@@ -1,0 +1,49 @@
+body {
+    background-color: #595546;
+    font-family: Verdana, serif;
+}
+
+hr {
+    color: #817e73;
+}
+
+h2, h3, h6 {
+    color: #9db8f5;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+header h2 {
+    font-size: 40px;
+}
+
+p, label {
+    color: #FFFFFF;
+}
+
+ol, ul {
+    color: #FFFFFF;
+}
+
+a:visited {
+    color: #d06666;
+}
+
+a:link {
+    color: #9db8f5;
+}
+
+a:hover {
+    color: #FFFFFF;
+}
+
+#movieDisclaimer {
+    font-style: italic;
+}
+
+p>span.feeling {
+    color: #eae584;
+    font-weight: bolder;
+}
