@@ -1,0 +1,13 @@
+#topmenu li {
+    display: inline;
+    border: 1px solid black;
+    color: #000000;
+    background-color: #FFFFFF;
+    padding: 10px;
+}
+
+#topmenu {
+    background-color: #ff0000;
+    padding: 20px;
+    text-align: center;
+}
