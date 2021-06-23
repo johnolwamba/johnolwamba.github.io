@@ -19,12 +19,23 @@ header h2 {
     font-size: 40px;
 }
 
+p:first-letter {
+    float: left;
+    font-size: 1.5em;
+    padding: 0 0 10px 0;
+    margin-right: 5px;
+}
+
 p, label {
     color: #FFFFFF;
 }
 
 ol, ul {
     color: #FFFFFF;
+}
+
+a {
+    text-decoration: none;
 }
 
 a:visited {
@@ -37,13 +48,27 @@ a:link {
 
 a:hover {
     color: #FFFFFF;
+    text-decoration: underline;
 }
 
 #movieDisclaimer {
     font-style: italic;
 }
 
-p>span.feeling {
+p > span.feeling {
     color: #eae584;
     font-weight: bolder;
+}
+
+dl > dt {
+    color: #eae584;
+}
+
+ol {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+li {
+    flex: 0 0 auto;
 }
