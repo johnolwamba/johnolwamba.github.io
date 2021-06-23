@@ -35,3 +35,11 @@ section > h3 {
 abbr {
     text-decoration: underline;
 }
+
+footer > p {
+    text-align: right;
+}
+
+pre {
+    background-color: #FFFFA8;
+}
