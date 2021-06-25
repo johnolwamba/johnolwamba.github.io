@@ -20,21 +20,21 @@ body {
     font-size: 14px;
 }
 
-.navbar {
+.res-navbar {
     background-color: #24504f;
 }
 
-.navbar a {
+.boot-nav {
+    padding: 15px;
+    background-color: #24504f;
+}
+
+.boot-nav a {
+    padding: 10px;
     color: white;
-    padding: 14px 20px;
     text-decoration: none;
     text-align: center;
     border-right: 1px solid #102424;
-}
-
-.navbar a:hover {
-    background-color: #ddd;
-    color: black;
 }
 
 .container {
