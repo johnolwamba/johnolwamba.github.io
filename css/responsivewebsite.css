@@ -46,19 +46,16 @@ body {
 .column1 {
     flex: 30%;
     background-color: #aaaaaa;
-    padding: 20px;
 }
 
 .column2 {
     flex: 40%;
     background-color: #bbbbbb;
-    padding: 20px;
 }
 
 .column3 {
     flex: 30%;
     background-color: #cccccc;
-    padding: 20px;
 }
 
 .footer {
@@ -74,14 +71,7 @@ body {
     .column1, .column3 {
         flex: 50%;
         max-width: 50%;
-    }
-
-    .column1 {
-        order: 1;
-    }
-
-    .column3 {
-        order: 2;
+        flex-direction: row;
     }
 
     .column2 {
