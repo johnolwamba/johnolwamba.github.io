@@ -27,19 +27,23 @@ window.onload = function () {
     checkBox.onchange = checkIfCheckBoxIsOn;
 
     /* update font weight of textarea onchange of checkbox */
-    function changeFontWeightOfTextArea(shouldBold) {
+    function changeStyleOfTextArea(shouldBold) {
         if (shouldBold) {
             textArea.style.fontWeight = "bold";
+            textArea.style.color = "green";
+            textArea.style.textDecoration = "underline";
         } else {
             textArea.style.fontWeight = "normal";
+            textArea.style.color = "black";
+            textArea.style.textDecoration = "none";
         }
     }
 
     //detect checkbox change
     function checkIfCheckBoxIsOn() {
-        changeFontWeightOfTextArea(checkBox.checked);
+        changeStyleOfTextArea(checkBox.checked);
     }
 
-    
+
 
 };
