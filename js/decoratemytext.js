@@ -7,9 +7,13 @@ window.onload = function () {
     "use strict";
 
     const clickedButton = document.getElementById("decoButton");
-    clickedButton.onclick = makeAlertCall;
+    // clickedButton.onclick = makeAlertCall;
 
-    function makeAlertCall() {
-        alert("Hello World!");
+  /*  function makeAlertCall() { ==> changing font size of textarea text
+        // alert("Hello World!");
+        const textArea = document.getElementById("inputTextArea");
+        textArea.style.fontSize = "24pt";
     }
+
+   */
 };
