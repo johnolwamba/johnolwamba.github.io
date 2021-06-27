@@ -8,7 +8,8 @@ window.onload = function () {
 
     /* Pick button and make it update textarea font size */
     const clickedButton = document.getElementById("decoButton");
-    clickedButton.onclick = changeFontOfTextArea;
+    // clickedButton.onclick = changeFontOfTextArea;
+    clickedButton.onclick = updateTimerAtInterval;
 
     // textarea
     const textArea = document.getElementById("inputTextArea");
@@ -44,6 +45,21 @@ window.onload = function () {
         changeStyleOfTextArea(checkBox.checked);
     }
 
+    // Using a timer
+    let timer = null;
 
+    function updateTimerAtInterval() {
+        if (timer === null) {
+            timer = setInterval(incrementFontSize, 500);
+        } else {
+            clearInterval(timer);
+            timer = null;
+        }
+    }
 
+    //increment font size by 2
+    function incrementFontSize() {
+        let prevFont = window.getComputedStyle(textArea, null).getPropertyValue("font-size");
+        textArea.style.fontSize = parseInt(prevFont) + 2 + "pt";
+    }
 };
