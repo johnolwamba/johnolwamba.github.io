@@ -6,14 +6,21 @@
 window.onload = function () {
     "use strict";
 
+    /* Pick button and make it update textarea font size */
     const clickedButton = document.getElementById("decoButton");
-    // clickedButton.onclick = makeAlertCall;
+    clickedButton.onclick = changeFontOfTextArea;
 
-  /*  function makeAlertCall() { ==> changing font size of textarea text
-        // alert("Hello World!");
+    function makeAlertCall() { // display an alert
+        alert("Hello World!");
+    }
+
+    function changeFontOfTextArea() { /*changing font size of textarea text*/
         const textArea = document.getElementById("inputTextArea");
         textArea.style.fontSize = "24pt";
     }
 
-   */
+    /* Pick checkbox and alert onchange */
+    const checkBox = document.getElementById("checkBox");
+    checkBox.onchange = makeAlertCall;
+
 };
