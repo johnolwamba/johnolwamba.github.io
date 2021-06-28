@@ -4,6 +4,7 @@
 window.onload = function () {
 
     const defaultAnimationSpeed = 250;
+    const turboAnimationSpeed = 50;
     let timer;
 
     document.getElementById("start").addEventListener("click", startAnimation);
@@ -13,18 +14,34 @@ window.onload = function () {
     document.getElementById("turbo").addEventListener("change", turboEffect);
 
     function startAnimation() {
+        document.getElementById("start").disabled = true;
+        document.getElementById("stop").disabled = false;
+        document.getElementById("animation").disabled = true;
         clearInterval(timer);
-        const animation = document.getElementById("animation").value;
 
-        timer = createAnimation(animation, defaultAnimationSpeed);
+        const animation = document.getElementById("animation").value;
+        const isTurbo = document.getElementById("turbo").checked;
+        const timeout = isTurbo ? turboAnimationSpeed : defaultAnimationSpeed;
+        timer = createAnimationInterval(animation, timeout);
     }
 
-    // const createAnimation = (animation, defaultAnimationSpeed) {
-    //     return undefined;
-    // }
+    const createAnimationInterval = (animation, timeout) => {
+        const frames = ANIMATIONS[animation].split("=====");
+        let loopIndex = -1;
+        return setInterval(function () {
+            ++loopIndex;
+            if (loopIndex >= frames.length) {
+                loopIndex = 0;
+            }
+            document.getElementById("text-area").value = frames[loopIndex];
+        }, timeout);
+    };
 
     function stopAnimation() {
-
+        document.getElementById("stop").disabled = true;
+        document.getElementById("start").disabled = false;
+        document.getElementById("animation").disabled = false;
+        clearInterval(timer);
     }
 
     function changeAnimation() {
@@ -37,6 +54,11 @@ window.onload = function () {
     }
 
     function turboEffect() {
-
+        if (document.getElementById("start").hasAttribute("disabled")) {
+            clearInterval(timer);
+            const animation = document.getElementById("animation").value;
+            const timeout = this.checked ? turboAnimationSpeed : defaultAnimationSpeed;
+            timer = createAnimationInterval(animation, timeout);
+        }
     }
 }
