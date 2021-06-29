@@ -11,60 +11,62 @@
 
 <div>
     <header>
-        MUM Golden Dome Market::: SRM System
+        <label id="bannerText">MUM Golden Dome Market::: SRM System</label>
 
-        <ul>
-            <li>Products</li>
-            <li>Suppliers</li>
-        </ul>
+        <div class="bootNav">
+            <a href="#">Products</a>
+            <a href="#">Suppliers</a>
+        </div>
 
         <label>Hello!</label>
-        <button>Sign Out</button>
+        <button id="signoutBtn">Sign Out</button>
     </header>
 
-    <div id="container">
-        <h3>New Product Form</h3>
+    <div class="container">
+        <h2>New Product Form</h2>
 
         <div id="grid-container">
-            <div>
-                <label>Product Number</label>
-                <input type="text" name="product_number">
+            <div id="column1">
+                <div>
+                    <label>Product Number</label>
+                    <input type="text" name="product_number">
+                </div>
+
+                <div>
+                    <label>Name</label>
+                    <input type="text" name="name">
+                </div>
+
+                <div>
+                    <label>Unit Price</label>
+                    <input type="number" name="unit_price">
+                </div>
             </div>
 
-            <div>
-                <label>Name</label>
-                <input type="text" name="name">
-            </div>
+            <div id="column2">
+                <div>
+                    <label>Quantity In Stock</label>
+                    <input type="number" name="quantity">
+                </div>
 
-            <div>
-                <label>Unit Price</label>
-                <input type="number" name="unit_price">
-            </div>
+                <div>
+                    <label>Supplier:</label>
+                    <select>
+                        <option>Select a supplier</option>
+                    </select>
+                </div>
 
-            <div>
-                <label>Quantity In Stock</label>
-                <input type="number" name="quantity">
+                <div>
+                    <label>Date Supplied</label>
+                    <input type="date" name="date">
+<!--                    <p>Enter a valid date</p>-->
+                </div>
             </div>
-
-            <div>
-                <label>Supplier:</label>
-                <select>
-                    <option>Select a supplier</option>
-                </select>
-            </div>
-
-            <div>
-                <label>Date Supplied</label>
-                <input type="date" name="date">
-                <p>Enter a valid date</p>
-            </div>
-
-            <div>
-                <button id="reset">Reset</button>
-                <button id="cancel">Cancel</button>
-                <button id="addProduct">Add Product</button>
-            </div>
-
+        </div>
+        <div id="buttonsContainer">
+            <button id="resetBtn">Reset</button>
+            <button id="cancelBtn">Cancel</button>
+            <button id="addProductBtn">Add Product</button>
         </div>
     </div>
 </div>

@@ -1,0 +1,125 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    color: #495057;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 40% 20% 20% 10% 10%;
+    flex-direction: row;
+    background-color: #30a5e7;
+    color: #FFFFFF;
+}
+
+header > label {
+    padding: 20px;
+}
+
+#bannerText {
+    font-size: 20px;
+    font-weight: normal;
+}
+
+#signoutBtn {
+    background-color: #e7eaee;
+    color: #474f56;
+    border: none;
+}
+
+.bootNav {
+    padding: 20px;
+}
+
+.bootNav a {
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    border-left: 1px solid #FFFFFF;
+}
+
+.container > h2 {
+    padding-left: 40px;
+    font-weight: normal;
+}
+
+#grid-container {
+    padding: 0 20px;
+    display: grid;
+    grid-template-areas: 'firstColumn secondColumn';
+}
+
+#column1 {
+    grid-area: firstColumn;
+}
+
+#column2 {
+    grid-area: secondColumn;
+}
+
+#column1, #column2 {
+    display: grid;
+    grid-template-rows: auto;
+    padding: 20px;
+}
+
+#column1 > div {
+    display: grid;
+    grid-template-rows: 25px 50px;
+    width: 100%;
+    padding: 5px;
+}
+
+#column2 > div {
+    display: grid;
+    grid-template-rows: 25px 50px;
+    width: 100%;
+    padding: 5px;
+}
+
+button {
+    height: 45px;
+    border-radius: 4px;
+    border: 1px solid;
+    padding: 14px;
+    margin-top: 10px;
+    font-size: 16px;
+    background-color: #FFFFFF;
+}
+
+#resetBtn {
+    border-color: #194d7f;
+    color: #194d7f;
+}
+
+#cancelBtn {
+    border-color: #dd5600;
+    color: #dd5600;
+}
+
+#addProductBtn {
+    border-color: #7bc5f0;
+    color: #7bc5f0;
+}
+
+input, select {
+    border: 1px solid #d9d9d9;
+    height: 45px;
+    border-radius: 4px;
+    padding: 10px;
+    color: #7a7c7f;
+    font-size: 16px;
+}
+
+#buttonsContainer {
+    float: right;
+}
+
+#buttonsContainer > button {
+    margin-right: 20px;
+}

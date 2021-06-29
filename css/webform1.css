@@ -10,11 +10,6 @@ p {
     font-size: 12px;
 }
 
-input {
-    color: #7a7c7f;
-    font-size: 16px;
-}
-
 label {
     margin-bottom: 5px;
 }
@@ -49,4 +44,6 @@ input {
     height: 30px;
     border-radius: 4px;
     padding: 10px;
+    color: #7a7c7f;
+    font-size: 16px;
 }
