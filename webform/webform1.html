@@ -8,8 +8,9 @@
     <link rel="icon" href="../images/favicon/favicon-16x16.png">
 </head>
 <body>
-<form>
+<form method="post" action="#">
     <div id="container">
+
         <div>
             <label>Email Address</label>
             <input type="email" placeholder="Enter email">
@@ -18,12 +19,25 @@
 
         <div>
             <label>Password</label>
-            <input type="password" placeholder="Password">
+            <input type="password" required placeholder="Password"
+                   pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{10,}$"
+                   title="Password should have atleast 10 characters in length and contain at least one number and one
+             uppercase and lowercase letter">
+        </div>
+
+        <div>
+            <label>Website URL</label>
+            <input type="text" placeholder="Website URL" pattern="https?://.+"
+                   title="Should start https:// or http://" required>
+            <p>We'll never share your email with anyone else</p>
         </div>
 
         <div>
             <span id="check">
-                <input type="checkbox"> <label>Check me out</label>
+                <label>
+<input type="checkbox">
+Check me out
+                </label>
             </span>
         </div>
 
