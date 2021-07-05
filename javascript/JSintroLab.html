@@ -141,9 +141,7 @@
         console.assert([10, 30, 50, 30, 30].toString() === multiplyBy10.toString(), multiplyBy10);
         console.log("Expected output of multiplying all elements by 10 is " + multiplyBy10 + " " + myFunctionTest([10, 30, 50, 30, 30], multiplyBy10));
 
-        const filterEqual3 = a.filter(function (element) {
-            return element === 3;
-        });
+        const filterEqual3 = a.filter(element => element === 3);
 
         console.assert([3, 3, 3].toString() === filterEqual3.toString(), filterEqual3);
         console.log("Expected output of filtering elements equal to 3 is " + filterEqual3 + " " + myFunctionTest([3, 3, 3], filterEqual3));

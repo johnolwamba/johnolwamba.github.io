@@ -32,7 +32,7 @@
         /* 5 Define a function reverse() that computes the reversal of a string.*/
         function reverse(inputValue) {
             const reduce = (inputValue) => {
-                return inputValue.split("").reduce((acc, curr) => curr + acc, "");
+                return inputValue.split("").reduce((acc, curr) => curr + acc);
             }
             return reduce(inputValue);
         }
