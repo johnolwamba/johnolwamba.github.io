@@ -1,9 +1,9 @@
 String.prototype.filter = function (...bannedWords) {
     let str = this;
     bannedWords.forEach(function (word) {
-        const index = str.indexOf(word);
-        if (index >= 0) {
-            const regex = new RegExp(word + "\\s?");
+        const indexOfWord = str.indexOf(word);
+        if (indexOfWord >= 0) {
+            const regex = new RegExp(indexOfWord + "\\s?");
             str = str.replace(regex, "");
         }
     });
