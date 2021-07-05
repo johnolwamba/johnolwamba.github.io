@@ -3,7 +3,7 @@ String.prototype.filter = function (...bannedWords) {
     bannedWords.forEach(function (word) {
         const indexOfWord = str.indexOf(word);
         if (indexOfWord >= 0) {
-            const regex = new RegExp(indexOfWord + "\\s?");
+            const regex = new RegExp(word + "\\s?");
             str = str.replace(regex, "");
         }
     });
