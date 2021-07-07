@@ -12,6 +12,11 @@ $(function () {
     $("#circles").click(function () {
         $(".circle").remove();
     });
+    
+    $("#circles").hover(function () {
+        $(".circle").fadeTo( "slow", 0.33 );
+        $(".circle").fadeTo( "slow", 1 );
+    });
 });
 
 function makeCircles(width, circleCount) {
