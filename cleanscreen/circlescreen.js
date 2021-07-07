@@ -1,3 +1,4 @@
+"use strict";
 $(function () {
     $("#startButton").click(function () {
         let width = $("#widthInput").val();
