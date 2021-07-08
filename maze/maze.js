@@ -1,5 +1,5 @@
+"use strict";
 $(function () {
-
     let lost = false;
     let gameStarted = false;
 
