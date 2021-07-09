@@ -8,7 +8,7 @@ function getNumber() {
         if (isNaN(input) || input.toLowerCase() === "stop") {
             console.log(`Your total sum is: ${sum}`);
             readline.close();
-        } else {clearInterval()
+        } else {
             sum += parseInt(input);
             getNumber();
         }
