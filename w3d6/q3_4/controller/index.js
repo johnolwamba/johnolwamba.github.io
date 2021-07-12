@@ -1,12 +1,4 @@
-const express = require("express");
-const path = require("path");
-const app = express();
-
-let Product = require("./models/product");
-
-app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, "view"));
-app.use(express.urlencoded({extended: false}));
+let Product = require("../models/product");
 
 function buildProductArray() {
     Product.removeAll();
@@ -18,17 +10,32 @@ function buildProductArray() {
     return Product.getAll();
 }
 
-app.get("/", (req, res) => {
+exports.getProducts = (req, res, next) => {
     const products = buildProductArray();
     res.render("index", {
         products: products,
         pageTitle: 'Products'
     });
-});
+}
 
-app.post("/addToCart", (req, res) => {
+exports.getShoppingCart = (req, res, next) => {
+    const list = buildShoppingCart();
+
+    let total = 0;
+    list.forEach(value => {
+        total += (value.quantity * value.product.price);
+    });
+
+    res.render("shoppingcart", {
+        shoppinglist: list,
+        total: total,
+        pageTitle: 'Shopping Cart'
+    });
+}
+
+exports.getAddToCart = (req, res, next) => {
     const {productId} = req.body;
-});
+};
 
 function buildShoppingCart() {
     return [{
@@ -46,20 +53,3 @@ function buildShoppingCart() {
     }
     ];
 }
-
-app.get("/shoppingcart", (req, res) => {
-    const list = buildShoppingCart();
-
-    let total = 0;
-    list.forEach(value => {
-        total += (value.quantity * value.product.price);
-    });
-
-    res.render("shoppingcart", {
-        shoppinglist: list,
-        total: total,
-        pageTitle: 'Shopping Cart'
-    });
-});
-
-app.listen(3000);
