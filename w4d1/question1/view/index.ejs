@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Cookies CRUD</title>
+    <link rel="stylesheet" href="/css/addcookie.css">
+</head>
+<body>
+<h1>Add Cookie</h1>
+<form method="post">
+    <div id="container">
+        <div>
+            <label>Key</label>
+            <input type="text" placeholder="Enter Key" name="key" required>
+        </div>
+
+        <div>
+            <label>Value</label>
+            <input type="text" placeholder="Enter Value" name="value" required>
+        </div>
+
+        <div>
+            <button type="submit" id="submitButton" name="submit">Add Cookie</button>
+        </div>
+    </div>
+</form>
+<hr/>
+
+<h3>Stored Cookies</h3>
+<table border="1">
+    <th>Key</th>
+    <th>Value</th>
+    <tbody>
+    <% for (const cookie of cookieslist) { %>
+        <tr>
+            <td><%= cookie.name %></td>
+            <td><%= cookie.value %></td>
+        </tr>
+    <% } %>
+    </tbody>
+</table>
+</body>
+</html>

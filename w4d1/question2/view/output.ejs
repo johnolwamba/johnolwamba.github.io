@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Output</title>
+    <link href="/css/<%= cssLink %>" rel="stylesheet">
+</head>
+<body>
+<% if (sessionFlash.message) { %>
+<h3>Welcome <%= sessionFlash.message.name %>, your age is: <%= sessionFlash.message.age %></h3>
+<% } %>
+</body>
+</html>
