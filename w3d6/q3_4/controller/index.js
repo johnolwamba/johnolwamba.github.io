@@ -35,6 +35,8 @@ exports.getShoppingCart = (req, res, next) => {
 
 exports.getAddToCart = (req, res, next) => {
     const {productId} = req.body;
+    console.log(productId)
+    res.redirect('shoppingcart');
 };
 
 function buildShoppingCart() {
