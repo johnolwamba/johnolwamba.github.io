@@ -1,5 +1,5 @@
 const express = require("express");
-const session = require('express-session')
+const session = require('express-session');
 const path = require("path");
 
 const app = express();
@@ -12,7 +12,7 @@ app.use(session({
     secret: 'otoyo',
     resave: false,
     saveUninitialized: true
-}))
+}));
 
 app.use(require('flash')());
 

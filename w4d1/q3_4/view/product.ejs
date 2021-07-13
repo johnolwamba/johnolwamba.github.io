@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Cart</title>
+</head>
+<body>
+<form action="/addToCart" method="post">
+    <input id="id" name="id" type="hidden" value=<%= id %>>
+    <input id="productName" name="productName" type="hidden" value=<%= productName %> />
+    <input id="price" name="price" type="hidden" value=<%= price %>>
+    <h4>Product: <%= productName %></h4>
+    <p><%= productName %></p>
+    <h5>Price: <%= price %>/=</h5>
+    <label for="quantity">Quantity</label>
+    <input id="quantity" name="quantity" type="number" value='1'>
+    <button type="submit">Add to Cart</button>
+</form>
+</body>
+</html>

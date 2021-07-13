@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Shopping List</title>
+
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td, th {
+            border: 1px solid #999;
+            padding: 0.5rem;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+<h1>Products List</h1>
+
+<%- include('products.ejs') %>
+
+<table>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Quantity</th>
+    <th>Action</th>
+    <tbody>
+    <% for (let id of Object.keys(products)) { %>
+        <% product = products[id]; %>
+        <tr>
+            <td><%= product.name %></td>
+            <td><%= product.price %></td>
+            <td><%= product.quantity %></td>
+            <td>
+                <a href=<%= "/product?id=" + id %>>Update Cart</a>
+            </td>
+        </tr>
+    <% } %>
+    </tbody>
+</table>
+</body>
+</html>
